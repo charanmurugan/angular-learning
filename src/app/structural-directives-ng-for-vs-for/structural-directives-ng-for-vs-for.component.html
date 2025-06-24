@@ -1,0 +1,52 @@
+<div class="row text-center">
+  <div class="col-12 m-5">
+    <b>Structural Directives - *ngFor vs for</b>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4">
+    <select id="" class="p-2">
+      <!-- <option [value]="color.color" *ngFor="let color of colors">
+        {{ color.color }} - {{ color.value }}
+      </option> -->
+      @for (color of colors; track $index) {
+      <option [value]="color.color">
+        {{ color.color }} - {{ color.value }}
+      </option>
+      }
+    </select>
+  </div>
+  <div class="col-4">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Hash Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let color of colors">
+          <td>{{ color.color }}</td>
+          <td>{{ color.value }}</td>
+        </tr> -->
+        @for(color of colors; track color){
+        <tr>
+          <td>{{ color.color }}</td>
+          <td>{{ color.value }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4">
+    <ol type="i">
+      <!-- <li *ngFor="let car of cars">
+        {{ car }}
+      </li> -->
+      @for(car of cars;track car){
+      <li>{{ car }}</li>
+      }
+    </ol>
+  </div>
+</div>
