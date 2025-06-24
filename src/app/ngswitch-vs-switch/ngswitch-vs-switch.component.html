@@ -1,0 +1,30 @@
+<div class="row text-center">
+  <div class="col-14 m-3">
+    <p><b>*ngSwitch vs switch</b></p>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-12 m-5">
+    <button class="btn btn-success m-3" (click)="set(1)">1st Grade</button>
+    <button class="btn btn-primary  m-3" (click)="set(2)">2nd Grade</button>
+    <button class="btn btn-warning  m-3" (click)="set(3)">3rd Grade</button>
+  </div>
+  <!-- <div [ngSwitch]="grade">
+    <div *ngSwitchCase="1">1st Grade Clicked</div>
+    <div *ngSwitchCase="2">2nd Grade Clicked</div>
+    <div *ngSwitchCase="3">3rd Grade Clicked</div>
+    <div *ngSwitchDefault>Click on the Grade</div>
+  </div> -->
+  @switch (grade) {
+    @case (1) {
+        <div>1st Grade Clicked</div>
+    }@case (2) {
+        <div>2nd Grade Clicked</div>
+    }@case(3){
+        <div>3rd Grade Clicked</div>
+    }@default {
+        <p>NO result found...</p>
+    }
+  }
+</div>
