@@ -1,0 +1,42 @@
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <p><b>Example of Attribute Directive -ngClass</b></p>
+    </div>
+</div>
+
+<div class="row text-center pt-3">
+    <div class="col-4">
+        <h3 [ngClass]="textColor">This is the sample text to test ngClass</h3>
+        <button class="btn btn-success m-3" (click)='setClass("text-success")'>Change to Green</button>
+        <button class="btn btn-danger m-3" (click)='setClass("text-danger")'>Change to Green</button>
+    </div>
+    <div class="col-4">
+        <h3 [ngClass]="isTextColor? 'text-success': 'text-danger'">This is the sample text to test ngClass based on boolean</h3>
+        <input type="checkbox" [(ngModel)]="isTextColor">  Change Color
+    </div>
+    <div class="col-4">
+        <h3 [ngClass]="textColorInput">This is the sample text to test ngClass based on input </h3>
+        <input type="text" [(ngModel)]="textColorInput" placeholder="Example : text-sucess">
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <p><b>Example of Attribute Directive -ngStyle</b></p>
+    </div>
+</div>
+
+<div class="row text-center pt-3">
+    <div class="col-4">
+        <h3 [ngStyle]="{'color':styleColor}">This is the sample text to test ngClass</h3>
+        <button class="btn btn-danger m-3" (click)='updateColor("red")'>Change to Red</button>
+        <button class="btn btn-success m-3" (click)='updateColor("green")'>Change to Green</button>
+    </div>
+    <div class="col-4">
+        <h3 [ngStyle]="{'color':isStyleColor?'red':'orange'}">This is the sample text to test ngClass based on boolean</h3>
+        <input type="checkbox" [(ngModel)]="isStyleColor">  Change Color
+    </div>
+    <div class="col-4">
+        <h3 [ngStyle]="myCustomClass">This is the sample text to test ngClass based on input </h3>
+    </div>
+</div>
