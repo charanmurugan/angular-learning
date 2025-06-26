@@ -22,6 +22,7 @@ export class LinkedSignalsComponent {
   // source and computation o linked signal
   total = linkedSignal({
     source: this.quantitySignal,
-    computation:()=>this.price*this.quantitySignal()+1
+    computation:()=>this.price*this.quantitySignal(),
+    equal:(a:any,b:any) => a===b
   })
 }
