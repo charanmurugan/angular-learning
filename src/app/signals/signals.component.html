@@ -1,0 +1,21 @@
+<div class="row text-center">
+    <div class="col-12 m-2">
+        <p><b>Signals</b></p>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-6 m-4">
+        <p>Without Signals</p>
+        <p class="m-3">Normal Counter Value : {{normalCounter}}</p>
+    </div>
+    <div class="col-6 m-4">
+        <p>With Signals</p>
+        <p class="m-3">Counter Value : {{counter()}}</p>
+    </div>
+</div>
+
+<button class="btn btn-primary" (click)="increment()">
+    Increment Counter
+</button>
