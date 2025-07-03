@@ -1,9 +1,85 @@
-<!-- <app-user></app-user> -->
-<!-- <app-data-binding></app-data-binding> -->
-<!-- <app-structural-directives-ng-if-vs-if></app-structural-directives-ng-if-vs-if> -->
-<!-- <app-structural-directives-ng-for-vs-for></app-structural-directives-ng-for-vs-for> -->
-<!-- <app-ngswitch-vs-switch></app-ngswitch-vs-switch> -->
-<!-- <app-attribute-directive> </app-attribute-directive> -->
-<!-- <app-signals></app-signals> -->
-<app-linked-signals></app-linked-signals>
-<router-outlet />
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/user"
+            >User</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/data-binding"
+            >Data Binding</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/ngfor-vs-for"
+            >*ngFor vs for</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/ngif-vs-if"
+            >*ngIf vs if</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/ngSwitch-vs-switch"
+            >*ngSwitch vs switch</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/attribute-directive"
+            >Attribute Directive</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/signals"
+            >Signals</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/linked-signals"
+            >Linked Signals</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
