@@ -8,6 +8,7 @@ import { AttributeDirectiveComponent } from './attribute-directive/attribute-dir
 import { SignalsComponent } from './signals/signals.component';
 import { LinkedSignalsComponent } from './linked-signals/linked-signals.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
 
 export const routes: Routes = [
   // {path:'',component:UserComponent},
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path: 'attribute-directive', component: AttributeDirectiveComponent },
   { path: 'signals', component: SignalsComponent },
   { path: 'linked-signals', component: LinkedSignalsComponent },
+  {path:'built-in-pipes',component:BuiltInPipesComponent},
   { path: '**', component: PageNotFoundComponent },
 ];
